@@ -28,6 +28,16 @@ public class BoradMain {
 			System.out.printf("%s\t%s\t%s\n",ele.subject,ele.content,ele.writer);
 		}
 		
+		//해시코드
+		Board bd = new Board("제목", "내용", "글쓴이");
+		System.out.println(bd); 
+		//println은 객체를 toString 메소드를 실행
+		//toString을 오버라이드 해놓으면 객체 이름만 써도 바로 적용됨
+		System.out.println(bd.hashCode()); // 순수한 해시코드 = int 값
+		System.out.println(bd.toString()); // 
+		
+		//주소(해시코드)가 같은데 값이 다른경우 학번은 같은데 이름이 다른경우
+		
 	}//end Main
 
 }//end Class

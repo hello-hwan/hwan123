@@ -7,7 +7,7 @@ import java.util.Set;
 public class HashSetMain {
 
 	public static void main(String[] args) {
-		// set : 순서 보장 안됨, 중복 객체 저장 안됨, 반복자 필요함 iterate
+		// set : 순서 보장 안됨, 중복 객체 저장 안됨, 반복자 필요함 iterator
 		
 		Set<String> set = new HashSet<String>();
 		//눈에 안보이는 미세한 공백이나 이런것들때문에 에러뜰수도 있다.
@@ -27,6 +27,10 @@ public class HashSetMain {
 			String element = iterator.next();
 			System.out.println("\t" + element);
 		}
+		
+		/*
+		 Iteratot<String> iterator
+		 */
 		
 		set.remove("JDBC");
 		set.remove("iBATIS");

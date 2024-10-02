@@ -13,6 +13,19 @@ public class Board {
 		this.writer = writer;
 	}
 	
+	Board(String subject, String content){
+		this.subject = subject;
+		this.content = content;
+	}
+	
 	//메소드
-
+	@Override
+	public String toString() {
+		//return super.toString();
+		return subject + " : " + content + " : " + writer;
+	}
+	
+	public String getSubject() {return subject;}
+	public String getContent() {return content;}
+	
 }
