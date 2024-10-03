@@ -19,7 +19,7 @@ public class Time586Main {
 			list1.add(0, String.valueOf(i));
 		}
 		
-		System.out.println(list1.get(0));
+		//System.out.println(list1.get(0));
 		
 		endTime = System.nanoTime();
 		System.out.println("ArrayList\t 걸린시간:\t" + (endTime - startTime) +  " ns");
@@ -27,7 +27,7 @@ public class Time586Main {
 		
 		startTime = System.nanoTime();
 		for(int i = 0; i < 10000; i++) {
-			list2.add(0, String .valueOf(i));
+			list2.add(0, String.valueOf(i));
 		}
 		endTime = System.nanoTime();
 		System.out.println("LinkedList\t 걸린시간:\t" + (endTime - startTime) +  " ns");

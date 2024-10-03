@@ -1,4 +1,4 @@
-package chap13;
+ package chap13;
 
 public class Member {
 	//필드

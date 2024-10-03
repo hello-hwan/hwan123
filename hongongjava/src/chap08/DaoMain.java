@@ -4,9 +4,15 @@ public class DaoMain {
 
 	public static void main(String[] args) {
 		
-		dbWork(new OracleDao()); //
+		DataAccessObject a = new OracleDao();
 		
-		dbWork(new MySqlDao());
+//		dbWork(new OracleDao()); 
+		dbWork(a); 
+		
+		DataAccessObject b = new MySqlDao();
+		
+//		dbWork(new MySqlDao());
+		dbWork(b);
 
 	}
 
