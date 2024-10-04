@@ -5,7 +5,18 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
-public class BankAppMain {
+public class BankAppMain2 {
+	
+	static int aaa(Set<Account> set, String reAno) {
+		int cnt = 0;
+		for(Account ele : set) {
+			if(ele.getAno().equals(reAno)) {
+				cnt++;
+				break;
+			}
+		}
+		return cnt;
+	}
 
 	public static void main(String[] args) {
 		
@@ -77,12 +88,30 @@ public class BankAppMain {
 				System.out.println("------");
 				System.out.print("계좌번호: ");
 				String reAno = sc.nextLine();
+				/*
+				int cnt = 0;
+				
+				for(Account ele : set) {
+					if(ele.getAno().equals(reAno)) {
+						cnt++;
+						break;
+					}
+				}
+				*/
+				
+				
+				
+				if(aaa(set,reAno) != 1) {
+					System.out.println("계좌번호를 확인해주세요.");
+					break;
+				}
 				System.out.print("예금액: ");
 				int reBal = Integer.parseInt(sc.nextLine());
 				
 				Iterator<Account> iterator = set.iterator();
 				//Iterator는 실행문 바로 위에 있어야 작동한다
 				//Iterator 는 자동초기화 안돼서 무조건 해당 위치에서 설정을 해야한다.
+				
 				
 				while(iterator.hasNext()) {
 					Account insert = iterator.next();

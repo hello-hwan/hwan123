@@ -14,7 +14,6 @@ public class BoardExam604 {
 						"-" + board.getContent() );
 			}
 			
-			
 			for(Board board : list) {
 				System.out.println( board);
 			}
