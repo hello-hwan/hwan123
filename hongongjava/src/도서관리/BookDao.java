@@ -63,7 +63,6 @@ public class BookDao {
 			int rows = pstmt.executeUpdate();
 			return rows;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		getClose();
