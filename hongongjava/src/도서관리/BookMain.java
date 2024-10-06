@@ -9,6 +9,7 @@ public class BookMain {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		Book book = null;
 		BookDao dao = null;
 		int cnt = 0;
 		boolean run = true;
@@ -39,7 +40,7 @@ public class BookMain {
 				String bNum = sc.nextLine();
 				
 				//DateBase에 넣을 객체 생성 (Book 객체)
-				Book book = new Book(title, writer,price,bNum);
+				book = new Book(title, writer,price,bNum);
 				//DataBase에 접근 메소드를 사용하기 위한 객체 생성 (BookDao 객체)
 				dao = new BookDao();
 				//DataBase에 조회, 삽입, 수정, 삭제하는 작업
@@ -47,12 +48,27 @@ public class BookMain {
 				//select문에서 리턴값을 int로 지정하여서 받을값을 미리 int cnt=0;으로 저장
 				cnt = dao.insert(book);
 				
-				
 				if(cnt == 1) {
 					System.out.println("추가성공");
 				}else {
 					System.out.println("추가실패");
 				}
+				
+			case 2 :
+				System.out.println("-------");
+				System.out.println("도서검색");
+				System.out.println("-------");
+				System.out.print("도서제목: ");
+				
+				String bookSel = sc.nextLine();
+				
+				Iterator<Book> iterator = book.
+				
+				for(Book ele : book) {
+					
+				}
+				
+				
 			}
 			
 		}

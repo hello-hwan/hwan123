@@ -15,6 +15,8 @@ public class Book {
 		this.bNum = bNum;
 	}
 	
+	Book(){}
+	
 	//메소드
 	public String getTitle() {
 		return title;
